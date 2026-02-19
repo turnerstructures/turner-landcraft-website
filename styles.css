@@ -311,3 +311,20 @@ input, textarea{
   height:1px;
   background: rgba(255,255,255,.08);
 }
+/* Kill the green band between sections (stop body gradients showing through) */
+.section{
+  background: var(--bg);
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep alt sections solid too (you can tint it later if you want) */
+.section.alt{
+  background: var(--bg);
+  overflow: hidden;
+}
+
+/* Optional: subtle divider line between stacked sections */
+.section + .section{
+  border-top: 1px solid rgba(255,255,255,.08);
+}

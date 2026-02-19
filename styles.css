@@ -295,3 +295,19 @@ input, textarea{
   border: 0 !important;
   box-shadow: none !important;
 }
+/* Fix: stop background/gradient bleed into Project Photos section */
+.section.alt{
+  background: var(--bg);         /* make it solid instead of translucent */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;              /* clips any glow spill */
+}
+
+/* Optional: add a clean divider line so it looks intentional */
+.section.alt::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height:1px;
+  background: rgba(255,255,255,.08);
+}

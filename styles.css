@@ -273,3 +273,25 @@ input, textarea{
   .shot img{ height: 320px; }
   .shot.tall img, .shot.wide img{ height: 320px; }
 }
+... all your current CSS ...
+
+@media (max-width: 860px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .bullets{ grid-template-columns: 1fr; }
+  .contact{ grid-template-columns: 1fr; }
+  .shot{ grid-column: span 12; }
+  .shot img{ height: 320px; }
+  .shot.tall img, .shot.wide img{ height: 320px; }
+}
+
+/* ==== LOGO FIX (paste below here) ==== */
+.hero-logo{
+  width: min(520px, 100%);
+  height: auto;
+  display: block;
+  background: #7a7a7a;
+  padding: 16px;
+  border-radius: 14px;
+  border: 0 !important;
+  box-shadow: none !important;
+}
